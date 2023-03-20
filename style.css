@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+#my-list {
+    margin: 1rem 5rem 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 0.5rem 1rem;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+#my-list li {
+    padding: 3px;
+
+}
+
+#form-add {
+    margin: 1rem;
+}
+
+#form-add>* {
+    padding: 3px;
+}
+
+#my-list li:hover {
+    background-color: #ddd;
+}
+
+.delete-btn {
+    /* float: right; */
+    width: 3rem;
+    justify-content: flex-end;
+}
+
+
+
+li.item-name {
+    display: flex;
+    justify-content: space-between;
+
+} 
+
+li.item-name > button {
+    visibility: hidden;
+    opacity: 0;
+    transition:visibility 0s linear 0.5s,opacity 0.5s linear;
+}
+
+li.item-name:hover > button {
+    visibility: visible;
+    opacity: 1;
+    transition-delay:0s;
+}
+
+/* .chart-container{
+    grid-area: chart;
+}
+
+.list-container{
+    grid-area: list;
+}
+
+.form-container{
+    grid-area: form;
+} */
+
+
+.main-container {
+    display: grid;
+    padding: 1rem 1rem;
+}
+
+@media (min-width: 840px) {
+    .container {
+        display: grid;
+        grid-template-columns: 4fr 2fr;
+        grid-template-rows: 4fr 2fr;
+
+    }
+
+    .chart-container {
+        grid-column: 1/4;
+        grid-row: 1/4;
+    }
+
+    .list-container {
+        grid-column: 4/6;
+    }
+
+}
