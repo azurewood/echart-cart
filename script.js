@@ -8,6 +8,7 @@ const cart = [
     { id: 5, value: 18, name: 'Chicken' }
 ];
 
+
 let option;
 
 option = {
